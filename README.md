@@ -2,6 +2,8 @@
 
 This is a PowerShell-based Windows Forms application that reads a list of CVE IDs from a CSV file, fetches detailed vulnerability data from the [CIRCL.lu CVE API](https://cve.circl.lu/api/), and writes the enriched results into a new CSV file.
 
+![CVE Fetcher Screenshot](https://raw.githubusercontent.com/dipta-roy/CVE_Fetcher/refs/heads/main/screenshot.png)
+
 ## 💡 Features
 
 - ✅ Simple GUI to select input CSV and define output file
@@ -64,3 +66,9 @@ No external modules required. Internet access is necessary to query the CIRCL.lu
 ## 📋 License
 
 This project is provided under the MIT License. Use it, tweak it, and build on it.
+
+## Author
+
+- **Name:** Dipta Roy
+- **Version:** 1.0
+- **Last Updated:** August 3, 2025
