@@ -1,3 +1,13 @@
+<#
+    CVE Info Fetcher (Windows GUI + CIRCL.lu API)
+    Author   : Dipta Roy
+    Version  : 1.0
+    Last Edit: 2025-08-02
+    Description:
+        PowerShell-based GUI tool to fetch CVE details from https://cve.circl.lu/api/
+        using a CSV input with a column named CVE_ID. The output is saved in a new CSV file.
+#>
+
 # Input and output file paths
 $inputFile = "cve.csv"
 $outputFile = "cve_output.csv"
