@@ -39,10 +39,10 @@ CVE-2023-25610
    ```bash
    pip install requests pandas tenacity
    ```
-2. Download `CVE_Info_Fetcher.py` from the repository.
+2. Download `CVE_Info_Fetcher.py` from the Python Program directory in this repository.
 
 ### PowerShell Program
-1. Download `CVE_Fetcher_UI.ps1` from the repository.
+1. Download `CVE_Fetcher_UI.ps1` from the PowerShell Program directory in this repository.
 2. Ensure PowerShell execution policy allows script execution:
    ```powershell
    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass
@@ -59,7 +59,7 @@ CVE-2023-25610
 3. In the GUI:
    - Click "Select CSV File with CVE IDs".
    - Monitor progress via the progress bar.
-   - Output is saved as `output_YYYYMMDD_HHMMSS.csv`.
+   - Output is saved as `Output_YYYYMMDD_HHMMSS.csv`.
 
 ### PowerShell Program (Console)
 #### Option 1: Direct Launch
@@ -72,13 +72,16 @@ CVE-2023-25610
 4. Output is saved as `output_YYYYMMDD_HHMMSS.csv`.
 
 #### Option 2: Batch File Launch
-1. Create a `.bat` file (e.g., `launch_cve_tool.bat`):
+1. Create a `.bat` file (e.g., `Run_CVE_Fetcher.bat`):
    ```batch
    @echo off
    powershell.exe -ExecutionPolicy Bypass -File "path\to\CVE_Fetcher_UI.ps1"
    pause
    ```
 2. Double-click the `.bat` file to run.
+
+#### Option 3: Use Predefined Batch File Launch
+1. Double-click the `Run_CVE_Fetcher.bat` file to run.
 
 ## ⚠️ Troubleshooting
 
@@ -89,8 +92,8 @@ CVE-2023-25610
 
 ## 🔳 Screenshots
 
-![CVE Fetcher Screenshot](https://raw.githubusercontent.com/dipta-roy/CVE_Fetcher/refs/heads/main/screenshot.png)
-![CVE Fetcher Screenshot](https://raw.githubusercontent.com/dipta-roy/CVE_Fetcher/refs/heads/main/Python_Screenshot.png)
+![CVE Fetcher Screenshot](https://raw.githubusercontent.com/dipta-roy/CVE_Fetcher/refs/heads/main/Screenshots/Powershell_Screenshot.png)
+![CVE Fetcher Screenshot](https://raw.githubusercontent.com/dipta-roy/CVE_Fetcher/refs/heads/main/Screenshots/Python_Screenshot.png)
 
 ## 📋 License
 

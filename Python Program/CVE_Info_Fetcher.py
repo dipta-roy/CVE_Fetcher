@@ -139,7 +139,7 @@ class CVEFetcherApp:
             self.root.update()
 
             # Prepare output (fixed to CSV)
-            output_file = f"output_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+            output_file = f"Output_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
             output_headers = headers + ['Title', 'Description', 'CVSS Score', 'Exploit Available', 'CWE', 'References']
             results = []
 
