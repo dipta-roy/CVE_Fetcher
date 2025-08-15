@@ -1,21 +1,18 @@
-# 🛡️ CVE Info Fetcher (Windows GUI + CIRCL.lu API)
+# 🛡️ CVE Info Fetcher 
 
-This is a PowerShell-based Windows Forms application that reads a list of CVE IDs from a CSV file, fetches detailed vulnerability data from the [CIRCL.lu CVE API](https://cve.circl.lu/api/), and writes the enriched results into a new CSV file.
+Tool to fetch CVE details from online APIs based on a list of CVE IDs. Supports both Python (GUI) and PowerShell (Console) implementations.
 
 ![CVE Fetcher Screenshot](https://raw.githubusercontent.com/dipta-roy/CVE_Fetcher/refs/heads/main/screenshot.png)
+![CVE Fetcher Screenshot](https://raw.githubusercontent.com/dipta-roy/CVE_Fetcher/refs/heads/main/Python_Screenshot.png)
 
 ## 💡 Features
 
-- ✅ Simple GUI to select input CSV and define output file
-- 🌐 Uses CIRCL.lu public API to fetch CVE details
-- 📊 Real-time progress bar during processing
-- 📁 Outputs include:
-  - CVE ID
-  - Title
-  - Description
-  - CVSS Score
-  - Exploit Availability
-  - Data Source
+- Fetch CVE details such as Title, Description, CVSS Score, Exploit Availability, CWE, and References.
+- Input CVE IDs from a CSV or TXT file.
+- Save results to a timestamped CSV file.
+- Two options to run:
+  - **Python GUI Tool** (interactive interface)
+  - **PowerShell Script** (command-line based)
 
 ## 🗂️ Input File Format
 
@@ -28,13 +25,46 @@ CVE-2023-25610
 ...
 ```
 
-## 🧪 Output Example
+## Prerequisites
 
-```CVE_ID,Title,Description
-CVE-2024-47730,Crypto Error Injection,In the Linux kernel...
-```
+### For Python Program
+1. **Python 3.8+** installed ([Download](https://www.python.org/downloads/))
+2. Install required Python libraries:
+   ```bash
+   pip install requests pandas tenacity
+   ```
+3. Internet connection (fetches data from the [CIRCL.lu CVE API](https://cve.circl.lu/api)).
 
-## ▶️ How to Run
+### For PowerShell Program
+1. Windows PowerShell 5.1+ (or PowerShell Core 7+)
+2. Internet connection (fetches data from [endoflife.date](https://endoflife.date/api) or CIRCL.lu API depending on script).
+
+
+## Python Program – CVE Info Fetcher (GUI)
+
+### File:
+`CVE_Info_Fetcher.py`
+
+### How to Run:
+1. Save your CVE IDs in a CSV file.
+   - First column: `CVE-YYYY-NNNN` format
+   - Example:
+     ```
+     CVE-ID
+     CVE-2024-12345
+     CVE-2023-54321
+     ```
+2. Open a terminal in the folder containing `CVE_Info_Fetcher.py`.
+3. Run:
+   ```bash
+   python CVE_Info_Fetcher.py
+   ```
+4. In the GUI:
+   - Click **"Select CSV File with CVE IDs"**
+   - Wait while it processes each CVE
+   - Output file will be saved as `output_YYYYMMDD_HHMMSS.csv`.
+   
+## PowerShell Program – CVE Fetcher (Console) 
 
 **Option 1: Double Click (GUI Launch)**
 Save the script as `CVE_Fetcher_UI.ps1`
@@ -55,13 +85,11 @@ Save this as `launch_cve_tool.bat` and double-click to launch.
 
 Change `C:\Path\To\` in the above options to your current directory where the script is saved.
 
-## 📦 Dependencies
 
-Works on Windows 10/11
-
-Requires PowerShell 5.1 or later (default in modern Windows)
-
-No external modules required. Internet access is necessary to query the CIRCL.lu API.
+## Notes
+- The Python version provides a progress bar, live status updates, and a Cancel option.
+- The PowerShell version is simpler but runs directly in the terminal.
+- Make sure your CSV files follow the correct format for best results.
 
 ## 📋 License
 
@@ -70,5 +98,5 @@ This project is provided under the MIT License. Use it, tweak it, and build on i
 ## Author
 
 - **Name:** Dipta Roy
-- **Version:** 1.0
-- **Last Updated:** August 3, 2025
+- **Version:** 1.1
+- **Last Updated:** August 15, 2025
