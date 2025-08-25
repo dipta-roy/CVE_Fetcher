@@ -97,7 +97,7 @@ CVE-2023-25610
 
 ## 📋 License
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute.
+This project is licensed under the [EPL-2.0 license](LICENSE). Feel free to use, modify, and distribute.
 
 ## 👨‍💻 Author
 
